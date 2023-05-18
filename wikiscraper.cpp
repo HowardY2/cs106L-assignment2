@@ -53,7 +53,9 @@ unordered_set<string> findWikiLinks(const string& inp) {
         ///////////////////////////////////////////////////////////////////////////////////////////////////
         // BEGIN STUDENT CODE HERE
         // Please delete this line when you start working!
-        throw std::invalid_argument("Not implemented yet.\n");
+        url_start = std::search(url_start, end, delim.begin(), delim.end());
+        if(url_start == end) break;
+        url_start += delim.length();
         // END STUDENT CODE HERE
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
